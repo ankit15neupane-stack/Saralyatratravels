@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saral Yatra Travels | Premium EV Services from KTM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@600;800;900&display=swap');
+        
+        :root {
+            --primary-emerald: #10b981;
+            --whatsapp-green: #25D366;
+            --facebook-blue: #1877F2;
+            --soft-bg: #fdfdfd;
+        }
+
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            scroll-behavior: smooth; 
+            background-color: var(--soft-bg);
+            color: #1e293b;
+        }
+        
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        .hero-section {
+            position: relative;
+            min-height: 75vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .hero-image-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Photo of a vehicle on a winding road through green hills */
+            background-image: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%), url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+            z-index: 1;
+        }
+
+        .brand-name {
+            font-family: 'Outfit', sans-serif;
+            letter-spacing: -0.02em;
+        }
+
+        .calculator-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
+            border-radius: 2.5rem;
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, #10b981, #34d399);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .bg-whatsapp { background-color: var(--whatsapp-green); }
+
+        /* Premium Ticket Styling */
+        .ticket-container {
+            background: #ffffff;
+            border: 2px solid #f1f5f9;
+            border-radius: 1.5rem;
+            position: relative;
+        }
+
+        .ticket-divider {
+            border-top: 2px dashed #e2e8f0;
+            position: relative;
+        }
+
+        .ticket-divider::before, .ticket-divider::after {
+            content: '';
+            position: absolute;
+            top: -10px;
+            width: 20px;
+            height: 20px;
+            background: white;
+            border-radius: 50%;
+            border: 2px solid #f1f5f9;
+        }
+        .ticket-divider::before { left: -12px; }
+        .ticket-divider::after { right: -12px; }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                min-height: 60vh;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-[100] glass-nav border-b border-slate-100">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <div class="w-12 h-12 bg-emerald-600 rounded-2xl flex items-center justify-center text-white shadow-xl">
+                    <i class="fas fa-van-shuttle text-xl"></i>
+                </div>
+                <div>
+                    <span class="brand-name text-3xl font-black text-slate-900 block leading-none">SARAL YATRA</span>
+                    <span class="text-[10px] uppercase font-bold text-emerald-600 tracking-[0.3em]">Travels & Tours</span>
+                </div>
+            </div>
+            
+            <div class="hidden lg:flex items-center gap-10">
+                <a href="#nuwakot-section" class="text-xs font-black text-emerald-600 uppercase tracking-widest hover:text-emerald-700 transition">Nuwakot Tours</a>
+                <a href="#fare-calculator" class="text-xs font-black text-slate-500 uppercase tracking-widest hover:text-emerald-600 transition">Distance & Fare</a>
+                <a href="https://web.facebook.com/profile.php?id=61577743836398" target="_blank" class="text-xs font-black text-blue-600 uppercase tracking-widest hover:text-blue-800 transition">
+                    <i class="fab fa-facebook-f mr-1"></i> Facebook
+                </a>
+            </div>
+
+            <button onclick="directWhatsAppContact()" class="bg-whatsapp text-white px-8 py-3.5 rounded-2xl font-black text-sm hover:scale-105 transition shadow-xl flex items-center gap-3">
+                <i class="fab fa-whatsapp text-lg"></i> CONTACT US
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-image-bg"></div>
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <div class="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md px-5 py-2.5 rounded-full mb-8 border border-white/20">
+                <div class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></div>
+                <span class="text-white text-[11px] font-black uppercase tracking-[0.2em]">Travels Nepal from KTM</span>
+            </div>
+            <h1 class="text-6xl md:text-8xl font-black text-white leading-[0.95] mb-8 tracking-tighter brand-name">
+                SARAL YATRA <br><span class="text-gradient">TRAVELS.</span>
+            </h1>
+            <p class="text-lg text-white/90 font-medium max-w-2xl mx-auto leading-relaxed mb-10 drop-shadow-md">
+                Premium EV charter service exploring the heart of Nepal. Experience silent, eco-friendly journeys with professional drivers starting from Kathmandu.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#nuwakot-section" class="bg-emerald-600 text-white px-10 py-5 rounded-2xl font-black text-sm uppercase tracking-widest hover:bg-emerald-700 transition shadow-2xl">
+                    View Nuwakot Packages
+                </a>
+                <a href="#fare-calculator" class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-10 py-5 rounded-2xl font-black text-sm uppercase tracking-widest hover:bg-white hover:text-slate-900 transition shadow-2xl">
+                    Check Custom Fare
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- HIGHLIGHTED: Nuwakot Specialized Section (Moved to Top) -->
+    <section id="nuwakot-section" class="py-24 bg-slate-50 relative overflow-hidden">
+        <!-- Decoration for highlight -->
+        <div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-emerald-200/20 blur-[100px] rounded-full"></div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <div class="max-w-2xl">
+                    <div class="inline-flex items-center gap-2 bg-emerald-100 text-emerald-700 px-3 py-1 rounded-lg text-[10px] font-black uppercase tracking-widest mb-4">
+                        <i class="fas fa-star"></i> Featured Highlight
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-black text-slate-900 brand-name leading-tight">Nuwakot <span class="text-emerald-600">Premium Circuits</span></h2>
+                    <p class="mt-4 text-slate-500 font-medium">Fixed-rate premium EV charters for Nuwakot's most iconic spiritual and landmarks. Our most popular routes from Kathmandu.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Jalpadevi -->
+                <div class="bg-white p-8 flex flex-col border border-slate-100 hover:border-emerald-500/30 group rounded-[2rem] transition-all shadow-sm hover:shadow-xl">
+                    <div class="w-12 h-12 bg-slate-100 rounded-2xl flex items-center justify-center text-slate-600 mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                        <i class="fas fa-om text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-black text-slate-900 mb-2 brand-name uppercase tracking-tighter leading-tight">Jalpadevi Mandir</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed mb-6">Dedicated spiritual trip to the sacred temple.</p>
+                    <div class="mt-auto">
+                        <div class="mb-6"><span class="text-3xl font-black text-slate-900">Rs. 6,999</span></div>
+                        <button onclick="bookNuwakotPackage('Jalpadevi Mandir Tour', 6999)" class="w-full py-4 bg-slate-900 text-white font-black text-[10px] rounded-2xl tracking-widest uppercase hover:bg-emerald-600 transition">Book Now</button>
+                    </div>
+                </div>
+
+                <!-- Dupcheshwor -->
+                <div class="bg-white p-8 flex flex-col border border-slate-100 hover:border-emerald-500/30 group rounded-[2rem] transition-all shadow-sm hover:shadow-xl">
+                    <div class="w-12 h-12 bg-slate-100 rounded-2xl flex items-center justify-center text-slate-600 mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                        <i class="fas fa-mountain-sun text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-black text-slate-900 mb-2 brand-name uppercase tracking-tighter leading-tight">Dupcheshwor</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed mb-6">Scenic hill drive with EV comfort.</p>
+                    <div class="mt-auto">
+                        <div class="mb-6"><span class="text-3xl font-black text-slate-900">Rs. 9,999</span></div>
+                        <button onclick="bookNuwakotPackage('Dupcheshwor Specialized Tour', 9999)" class="w-full py-4 bg-emerald-600 text-white font-black text-[10px] rounded-2xl tracking-widest uppercase hover:bg-emerald-700 transition">Book Now</button>
+                    </div>
+                </div>
+
+                <!-- Standard Tour -->
+                <div class="bg-emerald-50 p-8 flex flex-col border border-emerald-100 shadow-xl rounded-[2rem] group transition-all">
+                    <div class="w-12 h-12 bg-emerald-600 rounded-2xl flex items-center justify-center text-white mb-6">
+                        <i class="fas fa-route text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-black text-slate-900 mb-2 brand-name uppercase tracking-tighter leading-tight">Standard Tour</h3>
+                    <p class="text-xs text-slate-600 mb-4">Siltanki, Durbar, Jalpadevi</p>
+                    <div class="mt-auto">
+                        <div class="mb-6"><span class="text-3xl font-black text-emerald-700">Rs. 11,999</span></div>
+                        <button onclick="bookNuwakotPackage('Standard Tour', 11999)" class="w-full py-4 bg-emerald-600 text-white font-black text-[10px] rounded-2xl tracking-widest uppercase hover:bg-emerald-700 transition">Book Circuit</button>
+                    </div>
+                </div>
+
+                <!-- Grand Nuwakot Tour -->
+                <div class="bg-slate-900 p-8 flex flex-col shadow-2xl rounded-[2rem] group transition-all border border-slate-800">
+                    <div class="w-12 h-12 bg-emerald-500 rounded-2xl flex items-center justify-center text-white mb-6">
+                        <i class="fas fa-crown text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-black text-white mb-2 brand-name uppercase tracking-tighter leading-tight">Grand Nuwakot Tour</h3>
+                    <p class="text-[10px] text-slate-400 mb-4 leading-relaxed">
+                        Includes: <span class="text-emerald-400">Jalpadevi, Nuwakot Durbar, Siltanki, and Dupcheshwor.</span>
+                    </p>
+                    <div class="mt-auto">
+                        <div class="mb-6"><span class="text-3xl font-black text-white">Rs. 15,999</span></div>
+                        <button onclick="bookNuwakotPackage('Grand Nuwakot Tour (Jalpadevi, Durbar, Siltanki, Dupcheshwor)', 15999)" class="w-full py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-black text-[10px] rounded-2xl tracking-widest uppercase hover:scale-105 transition">Book Grand</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Distance & Fare Search Section -->
+    <section id="fare-calculator" class="py-24 bg-white relative z-20">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="calculator-card p-6 md:p-10">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                        
+                        <!-- Input Side (7 cols) -->
+                        <div class="lg:col-span-7">
+                            <div class="mb-8">
+                                <h2 class="text-3xl font-black text-slate-900 brand-name mb-2">Plan Your Journey</h2>
+                                <p class="text-slate-500 text-sm font-medium">Select your locations and trip duration for instant pricing.</p>
+                            </div>
+
+                            <div class="space-y-6">
+                                <!-- Pick-up Location -->
+                                <div class="relative group">
+                                    <label class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2 block px-1">Pick-up Location</label>
+                                    <div class="relative flex items-center">
+                                        <i class="fas fa-location-arrow absolute left-5 text-slate-400 group-focus-within:text-emerald-500"></i>
+                                        <input type="text" id="pickup-location" value="Kathmandu" placeholder="Enter pick-up point" 
+                                            class="w-full bg-slate-50 border-2 border-slate-100 pl-14 pr-6 py-5 rounded-2xl outline-none focus:border-emerald-500 focus:bg-white transition-all font-bold text-slate-900 text-lg">
+                                    </div>
+                                </div>
+
+                                <!-- Destination Search -->
+                                <div class="relative group">
+                                    <label class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2 block px-1">Where to?</label>
+                                    <div class="relative flex items-center">
+                                        <i class="fas fa-search absolute left-5 text-slate-400 group-focus-within:text-emerald-500"></i>
+                                        <input type="text" id="dest-search" placeholder="Search City (e.g. Pokhara, Ilam...)" 
+                                            class="w-full bg-slate-50 border-2 border-slate-100 pl-14 pr-6 py-5 rounded-2xl outline-none focus:border-emerald-500 focus:bg-white transition-all font-bold text-slate-900 text-lg"
+                                            oninput="searchPlaces(this.value)">
+                                    </div>
+                                    <div id="search-dropdown" class="hidden absolute top-full left-0 w-full bg-white border border-slate-200 mt-2 rounded-2xl shadow-2xl z-50 max-h-64 overflow-y-auto divide-y divide-slate-50"></div>
+                                </div>
+
+                                <!-- Trip Type Selection -->
+                                <div>
+                                    <label class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2 block px-1">Trip Preference</label>
+                                    <div class="grid grid-cols-2 gap-3">
+                                        <button id="btn-roundtrip" onclick="setTripType('roundtrip')" class="flex items-center justify-center gap-3 py-4 rounded-xl border-2 border-emerald-500 bg-emerald-50 text-emerald-700 font-bold text-sm transition-all shadow-sm">
+                                            <i class="fas fa-arrows-left-right"></i> Round Trip
+                                        </button>
+                                        <button id="btn-multiday" onclick="setTripType('multiday')" class="flex items-center justify-center gap-3 py-4 rounded-xl border-2 border-slate-100 bg-slate-50 text-slate-500 font-bold text-sm transition-all hover:bg-slate-100">
+                                            <i class="fas fa-calendar-days"></i> Multi-Day
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Multi-day Selector (Conditional) -->
+                                <div id="day-selector-container" class="hidden animate-in fade-in duration-300">
+                                    <label class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2 block px-1">Number of Days</label>
+                                    <div class="flex items-center gap-4 bg-slate-50 p-2 rounded-2xl border-2 border-slate-100">
+                                        <button onclick="adjustDays(-1)" class="w-12 h-12 bg-white rounded-xl shadow-sm border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-emerald-500 hover:text-white transition">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                        <input type="number" id="trip-days" value="1" min="1" max="30" readonly 
+                                            class="bg-transparent border-none text-center font-black text-xl text-slate-900 w-full outline-none">
+                                        <button onclick="adjustDays(1)" class="w-12 h-12 bg-white rounded-xl shadow-sm border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-emerald-500 hover:text-white transition">
+                                            <i class="fas fa-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Calculate Button -->
+                                <div class="pt-2">
+                                    <button onclick="handleManualCalculation()" class="w-full bg-slate-900 text-white py-5 rounded-2xl font-black text-sm tracking-widest uppercase hover:bg-emerald-600 transition-all flex items-center justify-center gap-3 shadow-lg group">
+                                        <i class="fas fa-calculator text-emerald-400 group-hover:text-white transition-colors"></i> Calculate Fare & Distance
+                                    </button>
+                                </div>
+
+                                <!-- Popular Quick Actions -->
+                                <div class="pt-4">
+                                    <p class="text-[10px] font-black text-slate-300 uppercase tracking-widest mb-3 block px-1">Popular from Kathmandu</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <button onclick="selectPlace('Pokhara')" class="px-4 py-2 bg-slate-100 rounded-lg text-xs font-bold text-slate-600 hover:bg-emerald-600 hover:text-white transition">Pokhara</button>
+                                        <button onclick="selectPlace('Chitwan')" class="px-4 py-2 bg-slate-100 rounded-lg text-xs font-bold text-slate-600 hover:bg-emerald-600 hover:text-white transition">Chitwan</button>
+                                        <button onclick="selectPlace('Trishuli')" class="px-4 py-2 bg-slate-100 rounded-lg text-xs font-bold text-slate-600 hover:bg-emerald-600 hover:text-white transition">Trishuli</button>
+                                        <button onclick="selectPlace('Lumbini')" class="px-4 py-2 bg-slate-100 rounded-lg text-xs font-bold text-slate-600 hover:bg-emerald-600 hover:text-white transition">Lumbini</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Output Side (5 cols) -->
+                        <div class="lg:col-span-5">
+                            <div id="result-container" class="h-full opacity-20 pointer-events-none transition-all duration-500 blur-[1px]">
+                                <div class="ticket-container shadow-2xl overflow-hidden flex flex-col h-full border-t-8 border-t-emerald-500">
+                                    <div class="p-8">
+                                        <div class="flex justify-between items-center mb-6">
+                                            <div class="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">Confirmed Fare</div>
+                                            <div class="text-[10px] font-black text-slate-400 uppercase tracking-widest">ID: SY-KTM-24</div>
+                                        </div>
+
+                                        <div class="space-y-6 mb-8">
+                                            <div>
+                                                <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">Destination</p>
+                                                <p id="res-name" class="text-3xl font-black text-slate-900 brand-name">Not Selected</p>
+                                            </div>
+                                            <div class="grid grid-cols-2 gap-4">
+                                                <div>
+                                                    <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">Details</p>
+                                                    <p id="res-distance" class="text-xl font-bold text-slate-800">0 KM</p>
+                                                </div>
+                                                <div>
+                                                    <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">Rate Basis</p>
+                                                    <p id="res-rate-label" class="text-xl font-bold text-slate-800">Rs. 60/KM</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="ticket-divider"></div>
+
+                                    <div class="p-8 bg-slate-50 mt-auto">
+                                        <div class="flex justify-between items-end mb-8">
+                                            <div>
+                                                <p id="fare-label" class="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-1">Total Estimated Fare</p>
+                                                <p id="res-total-fare" class="text-4xl font-black text-emerald-600 tracking-tighter">Rs. 0</p>
+                                            </div>
+                                            <div class="text-right">
+                                                <span class="text-[10px] font-bold text-slate-400 bg-white border border-slate-200 px-2 py-1 rounded">Tax Included</span>
+                                            </div>
+                                        </div>
+
+                                        <button onclick="bookCalculatedTrip()" class="w-full bg-emerald-600 text-white py-5 rounded-2xl font-black text-sm tracking-widest uppercase hover:bg-emerald-700 transition flex items-center justify-center gap-3 shadow-xl shadow-emerald-200">
+                                            <i class="fab fa-whatsapp text-lg"></i> Book on WhatsApp
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 py-20 text-center text-white border-t border-slate-800">
+        <div class="container mx-auto px-6">
+            <h2 class="brand-name text-4xl font-black mb-2 uppercase">SARAL YATRA TRAVELS</h2>
+            <p class="text-emerald-400 font-bold tracking-[0.4em] uppercase text-xs mb-10">Premium Eco-Friendly Charters</p>
+            
+            <div class="flex justify-center gap-6 mb-12">
+                <a href="https://web.facebook.com/profile.php?id=61577743836398" target="_blank" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-blue-600 transition">
+                    <i class="fab fa-facebook-f text-xl"></i>
+                </a>
+                <a href="tel:9704270253" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-emerald-600 transition">
+                    <i class="fas fa-phone text-xl"></i>
+                </a>
+            </div>
+
+            <p class="text-slate-500 text-sm font-medium">© 2024 Saral Yatra Travels. Kathmandu, Nepal.</p>
+            <p class="text-white font-black mt-4">Contact: 9704270253</p>
+        </div>
+    </footer>
+
+    <script>
+        const PHONE = "9704270253";
+        const RATE_PER_KM = 60; 
+        const RATE_PER_DAY = 11999;
+        let currentTripType = 'roundtrip';
+        let currentSelectedPlace = null;
+
+        const NEPAL_DATA = {
+            "Pokhara": 202, "Chitwan": 168, "Lumbini": 285, "Gorkha": 142, "Mustang": 380,
+            "Ilam": 475, "Janakpur": 224, "Hetauda": 85, "Birgunj": 145, "Biratnagar": 395,
+            "Butwal": 265, "Bhairahawa": 280, "Nepalgunj": 515, "Dhangadhi": 660, "Mahendranagar": 705,
+            "Dhulikhel": 30, "Nagarkot": 32, "Trishuli": 75, "Charikot": 133, "Bandipur": 148,
+            "Tansen": 300, "Surkhet": 590, "Sindhuli": 150, "Khurkot": 100, "Jiri": 188,
+            "Sauraha": 160, "Besisahar": 175, "Kalaiya": 130, "Gaur": 165, "Ghyangphedi": 95, "Bidur": 70
+        };
+
+        function setTripType(type) {
+            currentTripType = type;
+            const btnRound = document.getElementById('btn-roundtrip');
+            const btnMulti = document.getElementById('btn-multiday');
+            const dayContainer = document.getElementById('day-selector-container');
+            const fareLabel = document.getElementById('fare-label');
+
+            if(type === 'roundtrip') {
+                btnRound.className = "flex items-center justify-center gap-3 py-4 rounded-xl border-2 border-emerald-500 bg-emerald-50 text-emerald-700 font-bold text-sm transition-all shadow-sm";
+                btnMulti.className = "flex items-center justify-center gap-3 py-4 rounded-xl border-2 border-slate-100 bg-slate-50 text-slate-500 font-bold text-sm transition-all hover:bg-slate-100";
+                dayContainer.classList.add('hidden');
+                fareLabel.innerText = "Total Estimated Fare";
+            } else {
+                btnMulti.className = "flex items-center justify-center gap-3 py-4 rounded-xl border-2 border-emerald-500 bg-emerald-50 text-emerald-700 font-bold text-sm transition-all shadow-sm";
+                btnRound.className = "flex items-center justify-center gap-3 py-4 rounded-xl border-2 border-slate-100 bg-slate-50 text-slate-500 font-bold text-sm transition-all hover:bg-slate-100";
+                dayContainer.classList.remove('hidden');
+                fareLabel.innerText = "Multi-Day Package Fare";
+            }
+        }
+
+        function adjustDays(delta) {
+            const input = document.getElementById('trip-days');
+            let val = parseInt(input.value) + delta;
+            if (val < 1) val = 1;
+            if (val > 30) val = 30;
+            input.value = val;
+        }
+
+        function searchPlaces(val) {
+            const dropdown = document.getElementById('search-dropdown');
+            const query = val.toLowerCase().trim();
+            if(!query) { dropdown.classList.add('hidden'); return; }
+
+            const matches = Object.keys(NEPAL_DATA).filter(p => p.toLowerCase().includes(query));
+
+            if (matches.length > 0) {
+                dropdown.innerHTML = matches.map(p => `
+                    <div onclick="selectPlace('${p}')" class="px-6 py-4 hover:bg-slate-50 cursor-pointer transition flex justify-between items-center group">
+                        <div class="flex items-center gap-4">
+                            <i class="fas fa-location-dot text-slate-200 group-hover:text-emerald-500"></i>
+                            <span class="font-bold text-slate-800">${p}</span>
+                        </div>
+                        <span class="text-[10px] font-black text-slate-400 italic">${NEPAL_DATA[p]} KM</span>
+                    </div>
+                `).join('');
+                dropdown.classList.remove('hidden');
+            } else {
+                dropdown.innerHTML = `<div class="p-8 text-center text-slate-400 font-bold text-sm italic">City not found. Try another or contact us.</div>`;
+                dropdown.classList.remove('hidden');
+            }
+        }
+
+        function selectPlace(place) {
+            currentSelectedPlace = place;
+            document.getElementById('dest-search').value = place;
+            document.getElementById('search-dropdown').classList.add('hidden');
+        }
+
+        function handleManualCalculation() {
+            if(!currentSelectedPlace) {
+                const searchBox = document.getElementById('dest-search');
+                searchBox.classList.add('border-red-400');
+                setTimeout(() => searchBox.classList.remove('border-red-400'), 500);
+                return;
+            }
+            updateCalculation(currentSelectedPlace);
+        }
+
+        function updateCalculation(place) {
+            const km = NEPAL_DATA[place];
+            let fare = 0;
+            let detailText = "";
+            let rateLabelText = "";
+
+            if (currentTripType === 'roundtrip') {
+                fare = km * RATE_PER_KM * 2;
+                detailText = (km * 2) + " KM (Round Trip)";
+                rateLabelText = `Rs. ${RATE_PER_KM}/KM`;
+            } else {
+                const days = parseInt(document.getElementById('trip-days').value);
+                fare = days * RATE_PER_DAY;
+                detailText = `${days} Day(s) Package`;
+                rateLabelText = `Rs. ${RATE_PER_DAY}/Day`;
+            }
+
+            document.getElementById('res-name').innerText = place;
+            document.getElementById('res-distance').innerText = detailText;
+            document.getElementById('res-rate-label').innerText = rateLabelText;
+            document.getElementById('res-total-fare').innerText = "Rs. " + fare.toLocaleString();
+
+            const container = document.getElementById('result-container');
+            container.classList.remove('opacity-20', 'pointer-events-none', 'blur-[1px]');
+            
+            if(window.innerWidth < 1024) {
+                container.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+
+        function bookCalculatedTrip() {
+            const pickup = document.getElementById('pickup-location').value || 'Kathmandu';
+            const place = document.getElementById('res-name').innerText;
+            const details = document.getElementById('res-distance').innerText;
+            const fare = document.getElementById('res-total-fare').innerText;
+            const type = currentTripType === 'roundtrip' ? 'Round-Trip' : 'Multi-Day';
+            
+            const msg = `Namaste Saral Yatra Travels! I want to book a ${type} trip.\nPick-up: ${pickup}\nDestination: ${place}\nDetails: ${details}\nEstimated Fare: ${fare}`;
+            window.open(`https://wa.me/977${PHONE}?text=${encodeURIComponent(msg)}`, '_blank');
+        }
+
+        function bookNuwakotPackage(packageName, price) {
+            const msg = `Namaste Saral Yatra Travels! I'm interested in the Nuwakot Package: ${packageName} for Rs. ${price.toLocaleString()}`;
+            window.open(`https://wa.me/977${PHONE}?text=${encodeURIComponent(msg)}`, '_blank');
+        }
+
+        function directWhatsAppContact() {
+            window.open(`https://wa.me/977${PHONE}?text=Hello Saral Yatra Travels! I want to inquire about EV trips.`, '_blank');
+        }
+
+        document.addEventListener('click', (e) => {
+            if (!document.getElementById('dest-search').contains(e.target)) {
+                document.getElementById('search-dropdown').classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
